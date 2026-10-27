@@ -1,0 +1,76 @@
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #6a3df0;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      margin: 20px;
+      padding: 30px;
+      background: #0bb4ed;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 1.8rem;
+      color : #fff;
+      transition: color 0.3s;
+    }
+
+    .row { display: flex; gap: 8px; }
+
+    input {
+      flex: 1;
+      padding: 10px 14px;
+      font-size: 1rem;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      outline: none;
+    }
+    input:focus {
+        border-width: 3px;
+        border-color: #04f949; }
+
+    button {
+      padding: 10px 18px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background: #6a3df0;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    button:hover { background: #5428d6; }
+    button:active { transform: scale(0.96); }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      text-align: left;
+    }
+
+    li {
+      margin-bottom: 8px;
+      padding: 10px 14px;
+      color: #fff;
+      background: #04c223;
+      font-weight: 600;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+    li:hover { transform: translateX(6px); background: #ce0d0d; }
+

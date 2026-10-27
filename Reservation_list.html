@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <title>Reservations</title>
+  <link rel="stylesheet" href="res_style.css">
+</head>
+
+<body>
+  <div class="card">
+    <h1 id="title">Welcome</h1>
+
+    <div class="row">
+      <input id="name" placeholder="Your name" />
+      <button id="greet">Greet</button>
+    </div>
+
+    <ul id="list"></ul>
+  </div>
+
+  <script>
+    const title = document.getElementById('title');
+    const input = document.getElementById('name');
+    const list = document.getElementById('list');
+
+    
+    function addName() {
+      const name = input.value.trim();
+      if (!name) return;
+
+      title.textContent = `Hello, ${name}!`;
+
+      const li = document.createElement('li');
+      li.textContent = name;
+      list.appendChild(li);
+
+      input.value = '';
+      input.focus();
+    }
+
+    function removeName(e) {
+      if (e.target.nodeName === 'LI') {
+        const name = e.target.textContent;
+        title.textContent = `Goodbye, ${name}! see you later.`;
+        e.target.remove(); 
+      }
+    }
+
+    document.getElementById('greet').addEventListener('click', addName);
+    list.addEventListener('click', removeName);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') addName();
+    });
+  </script>
+</body>
+</html>
